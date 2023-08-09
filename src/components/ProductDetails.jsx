@@ -12,8 +12,13 @@ const ProductDetails = ({ item }) => {
       <h3>
         <FormattedPrice value={item[id - 1].price} />
       </h3>
+
+      <h3>{item[id-1].description}</h3>
+      <CartButton item={item[id]}></CartButton>
+
       <h3>{item[id - 1].description}</h3>
       <CartButton item={item[id - 1]}></CartButton>
+
       <BackButton></BackButton>
     </div>
   );

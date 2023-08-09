@@ -14,7 +14,13 @@ const ShoppingCart = () => {
 
         {shoppingCart.map((item) => (
           <div key={item.id}>
-            {item.name} - <FormattedPrice value={item.price} />
+
+            {item.name}
+            <FormattedPrice value={item.price} />
+
+
+            {item.quantity}
+
           </div>
         ))}
       </div>
