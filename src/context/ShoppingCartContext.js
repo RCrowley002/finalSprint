@@ -25,9 +25,6 @@ export const ShoppingCartProvider = ({ children }) => {
     setShoppingCart(shoppingCartFromServer);
   };
 
-<<<<<<< HEAD
-  const addToCart = async (newItem) => {
-=======
 
   useEffect(() => {
     fetchShoppingCart(); // Fetch and populate the shopping cart initially
@@ -35,7 +32,6 @@ export const ShoppingCartProvider = ({ children }) => {
 
   const addToCart = async (item) => {
 
->>>>>>> 5307602c7b1442dc24372158f4ae0cee602e7457
     try {
       const existingCartItem = shoppingCart.find((cartItem) => cartItem.id === item.id);
   
@@ -67,7 +63,6 @@ export const ShoppingCartProvider = ({ children }) => {
     }
   };
 
-<<<<<<< HEAD
   // to remove an item from your cart
   const deleteFromCart = async (id) => {
     await fetch(`http://localhost:5000/shoppingcart/${id}`, {
@@ -76,25 +71,13 @@ export const ShoppingCartProvider = ({ children }) => {
     setShoppingCart(shoppingCart.filter((item) => item.id !== id));
   };
 
-=======
-
-  const selectItem = (item) => {
-    return item;
-  };
-
-
->>>>>>> 5307602c7b1442dc24372158f4ae0cee602e7457
   return (
     <ShoppingCartContext.Provider
       value={{
         shoppingCart,
-<<<<<<< HEAD
         deleteFromCart,
-=======
         setShoppingCart,
->>>>>>> 5307602c7b1442dc24372158f4ae0cee602e7457
         addToCart,
-        selectItem,
       }}
     >
       {children}
