@@ -51,12 +51,15 @@ code {
   /* } */
 
   /* .itemDisplay:hover + .price { */
+  width: 240px;
   display: flex;
   position: relative;
   color: white;
   background-color: rgba(0, 0, 0, 0.726);
-  padding: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
   bottom: 28px;
+  text-align: right;
 }
 
 .productLabel {

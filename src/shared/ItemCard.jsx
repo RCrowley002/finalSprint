@@ -17,6 +17,7 @@ const ItemCard = ({ item }) => {
       <p>
         price - <FormattedPrice value={item.price} />
       </p>
+      <h2>Quantity {item.quantity}</h2>
       <button className="btn2 top-right" onClick={handleRemove}>
         Remove Item
       </button>

@@ -22,6 +22,7 @@ const ShoppingCartDropDown = () => {
         <Link to="/cart">
           <img src="/images/cart-icon.png" alt="view cart" />
         </Link>
+
         {isPreviewOpen && (
           <div className="cart-preview">
             {shoppingCart.length > 0 ? (
