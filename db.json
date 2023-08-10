@@ -1,10 +1,22 @@
 {
   "shoppingcart": [
     {
+<<<<<<< HEAD
+=======
+      "id": 1,
+      "name": "Fulgor Nocturnus",
+      "description": "Tibaldi made, 945 black diamonds,123 rubies,18-carat gold nib",
+      "price": 8000000,
+      "icon": "images/pen1.jpg",
+      "quantity": 1
+    },
+    {
+>>>>>>> 5307602c7b1442dc24372158f4ae0cee602e7457
       "id": 3,
       "name": "1010 Diamond Edition",
       "description": "Caran d’Ache made, diamonds in different cutting styles, 18 carat white gold  ",
       "price": 1280000,
+<<<<<<< HEAD
       "icon": "images/pen3.jpg"
     },
     {
@@ -13,6 +25,18 @@
       "description": "Caran d’Ache made, natural black stone found in the mountains of Switzerland",
       "price": 265000,
       "icon": "images/pen6.jpg"
+=======
+      "icon": "images/pen3.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "name": " Mystery Masterpiece",
+      "description": "Montblanc made, over 800 diamonds and three variations involving emeralds, sapphires, and rubies along its body",
+      "price": 730000,
+      "icon": "images/pen2.jpg",
+      "quantity": 1
+>>>>>>> 5307602c7b1442dc24372158f4ae0cee602e7457
     }
   ]
 }
