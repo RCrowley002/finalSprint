@@ -1,13 +1,18 @@
 import ProductItem from "./ProductItem";
-import CartButton from "../shared/CartButton";
+import Nav from "./Nav";
+import Header from "./Header";
 
 const ProductList = ({ products }) => {
   return (
-    <div className="productList">
-      {products.map((item) => (
-        <ProductItem item={item} />
-      ))}
-    </div>
+    <>
+      <Nav></Nav>
+      <Header></Header>
+      <div className="productList">
+        {products.map((item) => (
+          <ProductItem item={item} />
+        ))}
+      </div>
+    </>
   );
 };
 

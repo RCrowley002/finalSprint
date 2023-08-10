@@ -5,12 +5,17 @@ import ShoppingCartContext from "../context/ShoppingCartContext";
 import ItemCard from "../shared/ItemCard";
 import OrderSummary from "./OrderSummary";
 import CheckoutButton from "../shared/CheckoutButton";
+import Nav from "./Nav";
+import Header from "./Header";
+
 const ShoppingCart = () => {
   const { shoppingCart } = useContext(ShoppingCartContext);
 
   return (
     <>
-      <div>
+      <Nav></Nav>
+      <Header></Header>
+      <div className="cart">
         <h2>ShoppingCart</h2>
 
         {shoppingCart.map((item) => (
@@ -19,7 +24,6 @@ const ShoppingCart = () => {
 
         <OrderSummary />
       </div>
-
       <BackButton></BackButton>
 
       <CheckoutButton></CheckoutButton>

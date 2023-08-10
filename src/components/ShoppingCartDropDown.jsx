@@ -20,6 +20,8 @@ const ShoppingCartDropDown = () => {
         onMouseLeave={togglePreview}
       >
         <Link to="/cart">
+          {" "}
+          View Cart
           <img src="/images/cart-icon.png" alt="view cart" />
         </Link>
 

@@ -1,5 +1,4 @@
 import "./App.css";
-import Header from "./components/Header";
 import Home from "./components/Home";
 import ProductList from "./components/ProductList";
 import ProductDetails from "./components/ProductDetails";
@@ -9,6 +8,7 @@ import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import Checkout from "./components/Checkout";
+import Contact from "./components/Contact";
 
 function App() {
   const [products] = useState(getProducts);
@@ -16,7 +16,9 @@ function App() {
   return (
     <Router>
       <ShoppingCartProvider>
-        <Header></Header>
+        {/* <Nav></Nav>
+        <Header></Header> */}
+
         <Routes>
           <Route
             path="/"
@@ -38,6 +40,7 @@ function App() {
           ></Route>
           <Route path="/cart" element={<ShoppingCart></ShoppingCart>}></Route>
           <Route path="/checkout" element={<Checkout></Checkout>}></Route>
+          <Route path="/contact" element={<Contact></Contact>}></Route>
         </Routes>
       </ShoppingCartProvider>
     </Router>
