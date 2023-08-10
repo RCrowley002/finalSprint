@@ -12,13 +12,13 @@ const ProductDetails = ({ item }) => {
       <Nav></Nav>
       <Header></Header>
 
-      <div>
-        <img src={item[id - 1].icon} alt="pen" className="productImage" />
-        <h2>{item[id - 1].name}</h2>
-        <h3>
+      <div className="details">
+        <img src={item[id - 1].icon} alt="pen" className="detailsImage" />
+        <h2 className="detailsName">{item[id - 1].name}</h2>
+        <p>{item[id - 1].description}</p>
+        <h2 className="detailsPrice">
           <FormattedPrice value={item[id - 1].price} />
-        </h3>
-        <h3>{item[id - 1].description}</h3>
+        </h2>
         <CartButton item={item[id - 1]}></CartButton>
         <BackButton></BackButton>
       </div>

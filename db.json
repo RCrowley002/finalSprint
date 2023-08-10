@@ -15,6 +15,14 @@
       "price": 8000000,
       "icon": "/images/pen1.jpg",
       "quantity": 2
+    },
+    {
+      "id": 8,
+      "name": "Taj Mahal Limited Edition",
+      "description": "Montblanc made, encrusted with diamonds, sapphires and malachite that all sit on a champagne-tone gold",
+      "price": 2000000,
+      "icon": "/images/pen8.jpg",
+      "quantity": 1
     }
   ]
 }
