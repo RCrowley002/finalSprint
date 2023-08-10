@@ -3,7 +3,7 @@ import CartButton from "../shared/CartButton";
 
 const ProductList = ({ products }) => {
   return (
-    <div>
+    <div className="productList">
       {products.map((item) => (
         <ProductItem item={item} />
       ))}

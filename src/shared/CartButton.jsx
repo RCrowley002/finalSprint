@@ -13,7 +13,7 @@ const CartButton = ({ item }) => {
 
   return (
     <button className="btn1" onClick={handleAddToCart}>
-      <BsCartPlusFill /> Add to Cart
+      <BsCartPlusFill />
     </button>
   );
 };
