@@ -7,7 +7,7 @@ const ProductDetails = ({ item }) => {
   const { id } = useParams();
   return (
     <div>
-      <img src={`/${item[id - 1].icon}`} alt="pen" className="productImage" />
+      <img src={item[id - 1].icon} alt="pen" className="productImage" />
       <h2>{item[id - 1].name}</h2>
       <h3>
         <FormattedPrice value={item[id - 1].price} />

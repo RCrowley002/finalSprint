@@ -8,7 +8,6 @@ import CartCard from "../shared/CartCard";
 const ShoppingCartDropDown = () => {
   const { shoppingCart } = useContext(ShoppingCartContext);
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
-
   const togglePreview = () => {
     setIsPreviewOpen(!isPreviewOpen);
   };
@@ -26,14 +25,7 @@ const ShoppingCartDropDown = () => {
         {isPreviewOpen && (
           <div className="cart-preview">
             {shoppingCart.length > 0 ? (
-              shoppingCart.map((item) => (
-                <div key={item.id}>
-                  <p>
-                    {item.name} - <FormattedPrice value={item.price} />
-                  </p>
-                  {item.quantity}
-                </div>
-              ))
+              shoppingCart.map((item) => <CartCard key={item.id} item={item} />)
             ) : (
               <p> Your cart is empty</p>
             )}
