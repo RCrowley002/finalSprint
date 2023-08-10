@@ -64,6 +64,12 @@ code {
   font-size: 10pt;
 }
 
+.dropImage {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+}
+
 .btn1 {
   font-size: 22pt;
   cursor: pointer;
@@ -102,9 +108,10 @@ code {
   right: 0;
   background-color: white;
   border: 1px solid #ccc;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 10px;
-  z-index: 1000; /* Ensure the dropdown is above other content */
+  border-radius: 10px;
+  box-shadow: 0px 2px 4px black;
+  padding: 5px;
+  z-index: 1000;
   display: none; /* Initially hide the dropdown */
 }
 
@@ -112,6 +119,50 @@ code {
   display: block; /* Show the dropdown on hover */
 }
 
+<<<<<<< HEAD
+.cart-card {
+  background-color: #f5f5f5;
+  color: black;
+  border: 2px solid silver;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px black;
+  padding: 3px;
+  margin-bottom: 3px;
+  position: relative;
+}
+
+.card {
+  background-color: #f5f5f5;
+  color: black;
+  width: 600px;
+  border: 2px solid silver;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px black;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.top-right {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.summary {
+  border: 3px solid black;
+  width: 300px;
+  padding: 10px;
+  background-color: #f5f5f5;
+}
+
+.summary p {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 5px;
+=======
 .cart {
   margin: 50px;
+>>>>>>> 5307602c7b1442dc24372158f4ae0cee602e7457
 }
