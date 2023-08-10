@@ -8,6 +8,7 @@ import { getProducts } from "./data/api";
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext";
+import Checkout from "./components/Checkout";
 
 function App() {
   const [products] = useState(getProducts);
@@ -36,6 +37,7 @@ function App() {
             element={<ProductList products={products}></ProductList>}
           ></Route>
           <Route path="/cart" element={<ShoppingCart></ShoppingCart>}></Route>
+          <Route path="/checkout" element={<Checkout></Checkout>}></Route>
         </Routes>
       </ShoppingCartProvider>
     </Router>
