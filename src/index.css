@@ -47,10 +47,10 @@ code {
 }
 
 .price {
-  /* display: none; */
-  /* } */
+  display: none;
+}
 
-  /* .itemDisplay:hover + .price { */
+.itemDisplay:hover + .price {
   width: 240px;
   display: flex;
   position: relative;
