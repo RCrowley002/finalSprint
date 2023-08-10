@@ -30,6 +30,7 @@ const ShoppingCartDropDown = () => {
                   <p>
                     {item.name} - <FormattedPrice value={item.price} />
                   </p>
+                  {item.quantity}
                 </div>
               ))
             ) : (
