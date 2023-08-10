@@ -1,4 +1,3 @@
-import { BsCartPlusFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import CartButton from "../shared/CartButton";
 import FormattedPrice from "./FormattedPrice";
@@ -16,7 +15,7 @@ const ProductItem = ({ item }) => {
         <FormattedPrice value={item.price} />
       </h3>
 
-      <CartButton></CartButton>
+      <CartButton item={item}></CartButton>
     </div>
   );
 };

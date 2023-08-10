@@ -5,6 +5,10 @@ const ShoppingCartContext = createContext();
 export const ShoppingCartProvider = ({ children }) => {
   const [shoppingCart, setShoppingCart] = useState([]);
 
+  useEffect(() => {
+    fetchShoppingCart(); // Fetch and populate the shopping cart initially
+  }, []);
+
   const fetchShoppingCartData = async () => {
     try {
       const res = await fetch("http://localhost:5000/shoppingcart");
@@ -24,10 +28,6 @@ export const ShoppingCartProvider = ({ children }) => {
 
     setShoppingCart(shoppingCartFromServer);
   };
-
-  useEffect(() => {
-    fetchShoppingCart(); // Fetch and populate the shopping cart initially
-  }, []);
 
   const addToCart = async (newItem) => {
     try {
@@ -51,11 +51,19 @@ export const ShoppingCartProvider = ({ children }) => {
     }
   };
 
+  // to remove an item from your cart
+  const deleteFromCart = async (id) => {
+    await fetch(`http://localhost:5000/shoppingcart/${id}`, {
+      method: "DELETE",
+    });
+    setShoppingCart(shoppingCart.filter((item) => item.id !== id));
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
         shoppingCart,
-
+        deleteFromCart,
         addToCart,
       }}
     >

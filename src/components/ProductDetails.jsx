@@ -1,4 +1,3 @@
-import { BsCartPlusFill } from "react-icons/bs";
 import BackButton from "../shared/BackButton";
 import CartButton from "../shared/CartButton";
 import FormattedPrice from "./FormattedPrice";
@@ -12,7 +11,7 @@ const ProductDetails = ({ item, id }) => {
         <FormattedPrice value={item[id].price} />
       </h3>
       <h3>{item[id].description}</h3>
-      <CartButton></CartButton>
+      <CartButton item={item[id]}></CartButton>
       <BackButton></BackButton>
     </div>
   );

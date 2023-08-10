@@ -1,12 +1,12 @@
 import React from "react";
-
 import BackButton from "../shared/BackButton";
-
-import { useContext, useEffect, useState } from "react";
-
+import { useContext } from "react";
 import ShoppingCartContext from "../context/ShoppingCartContext";
+import ItemCard from "../shared/ItemCard";
+import OrderSummary from "./OrderSummary";
+import CheckoutButton from "../shared/CheckoutButton";
 
-const ShoppingCart = ({ item }) => {
+const ShoppingCart = () => {
   const { shoppingCart } = useContext(ShoppingCartContext);
 
   return (
@@ -15,14 +15,13 @@ const ShoppingCart = ({ item }) => {
         <h2>ShoppingCart</h2>
 
         {shoppingCart.map((item) => (
-          <div key={item.id}>
-            {item.name}
-            {item.price}
-          </div>
+          <ItemCard key={item.id} item={item} />
         ))}
+        <OrderSummary />
       </div>
 
       <BackButton></BackButton>
+      <CheckoutButton></CheckoutButton>
     </>
   );
 };

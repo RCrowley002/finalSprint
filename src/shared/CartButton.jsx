@@ -1,8 +1,11 @@
 import { BsCartPlusFill } from "react-icons/bs";
 
-const CartButton = () => {
+const CartButton = ({ item }) => {
+  const showDetails = () => {
+    console.log(item.name);
+  };
   return (
-    <button className="btn1">
+    <button className="btn1" onClick={showDetails}>
       <BsCartPlusFill /> Add to Cart
     </button>
   );
