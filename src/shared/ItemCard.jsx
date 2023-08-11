@@ -1,13 +1,22 @@
 import FormattedPrice from "../components/FormattedPrice";
 import { useContext } from "react";
-import ShoppingCartContext from "../context/ShoppingCartContext";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 
 const ItemCard = ({ item }) => {
   // code for remove item button to function
-  const { deleteFromCart } = useContext(ShoppingCartContext);
+
+  const { deleteFromCart } = useShoppingCart();
+
+  // set button up to remove one item at a time and not the whole quantity
 
   const handleRemove = () => {
-    deleteFromCart(item.id);
+    if (item.quantity === 0) {
+      deleteFromCart(item.id);
+    } else {
+      const updatedItem = { ...item, quantity: item.quantity - 1 };
+
+      deleteFromCart(updatedItem);
+    }
   };
 
   return (

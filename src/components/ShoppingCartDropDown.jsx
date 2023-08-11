@@ -1,12 +1,11 @@
 import React, { useState, useContext } from "react";
 import { Link } from "react-router-dom";
-import FormattedPrice from "./FormattedPrice";
-import ShoppingCartContext from "../context/ShoppingCartContext";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 import CartCard from "../shared/CartCard";
 
 // making a drop down preview of what is already in cart
 const ShoppingCartDropDown = () => {
-  const { shoppingCart } = useContext(ShoppingCartContext);
+  const { shoppingCart } = useShoppingCart();
   const [isPreviewOpen, setIsPreviewOpen] = useState(false);
   const togglePreview = () => {
     setIsPreviewOpen(!isPreviewOpen);

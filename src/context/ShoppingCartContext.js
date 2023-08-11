@@ -2,6 +2,20 @@ import React, { createContext, useEffect, useContext, useState } from "react";
 
 const ShoppingCartContext = createContext();
 
+const useShoppingCart = () => {
+  const context = useContext(ShoppingCartContext);
+
+  if (!context) {
+    throw new Error(
+      "useShoppingCart must be used within a ShoppingCartProvider"
+    );
+  }
+
+  return context;
+};
+
+export { useShoppingCart };
+
 export const ShoppingCartProvider = ({ children }) => {
   const [shoppingCart, setShoppingCart] = useState([]);
 
@@ -80,11 +94,39 @@ export const ShoppingCartProvider = ({ children }) => {
   };
 
   // to remove an item from your cart
-  const deleteFromCart = async (id) => {
-    await fetch(`http://localhost:5000/shoppingcart/${id}`, {
-      method: "DELETE",
-    });
-    setShoppingCart(shoppingCart.filter((item) => item.id !== id));
+
+  const deleteFromCart = async (item) => {
+    if (item.quantity === 0) {
+      await fetch(`http://localhost:5000/shoppingcart/${item.id}`, {
+        method: "DELETE",
+      });
+
+      setShoppingCart((prevCart) =>
+        prevCart.filter((cartItem) => cartItem.id !== item.id)
+      );
+    } else {
+      const response = await fetch(
+        `http://localhost:5000/shoppingcart/${item.id}`,
+
+        {
+          method: "PUT",
+
+          headers: { "Content-Type": "application/json" },
+
+          body: JSON.stringify(item),
+        }
+      );
+
+      if (!response.ok) {
+        console.error("Error updating item quantity:", response);
+
+        return;
+      }
+
+      setShoppingCart((prevCart) =>
+        prevCart.map((cartItem) => (cartItem.id === item.id ? item : cartItem))
+      );
+    }
   };
 
   return (
