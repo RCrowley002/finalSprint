@@ -2,9 +2,8 @@ import { Link } from "react-router-dom";
 
 const BackButton = () => {
   return (
-
     <Link to="/products">
-      <button className="btn2">Go Back</button>
+      <button className="btn1"> &#8656; To Shop</button>
     </Link>
   );
 };

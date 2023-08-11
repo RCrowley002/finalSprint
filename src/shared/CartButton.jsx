@@ -1,7 +1,4 @@
 import React, { useContext } from "react";
-
-import { BsCartPlusFill } from "react-icons/bs";
-
 import ShoppingCartContext from "../context/ShoppingCartContext";
 
 const CartButton = ({ item }) => {
@@ -13,7 +10,7 @@ const CartButton = ({ item }) => {
 
   return (
     <button className="btn1" onClick={handleAddToCart}>
-      <BsCartPlusFill />
+      <img src="/images/cart-icon.png" alt="view cart" /> Add To Cart
     </button>
   );
 };

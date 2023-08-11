@@ -2,13 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { FaInstagram, FaFacebook } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
+import Logo from "../shared/Logo";
 
 const Home = () => {
   return (
     <div>
-      <h2>Pens of Haute Culture</h2>
-      <img src="" alt="Logo" className="logoMain" />
-
+      <div className="home">
+        <Logo></Logo>
+      </div>
       <div className="homeImages">
         <img src="/images/pen7.jpg" alt="Pen" />
         <img src="/images/pen14.jpg" alt="Pen" />
@@ -19,9 +20,16 @@ const Home = () => {
       </Link>
       <br />
       <div className="socials">
-        <FaInstagram className="socialsIcons" />
-        <MdOutlineMail className="socialsIcons" />
-        <FaFacebook className="socialsIcons" />
+        <Link to="/">
+          <FaInstagram className="socialsIcons" />
+        </Link>
+        <Link to="/">
+          <MdOutlineMail className="socialsIcons" />
+        </Link>
+        <Link to="/">
+          <FaFacebook className="socialsIcons" />
+        </Link>
+        &copy;Copyright 2023
       </div>
     </div>
   );

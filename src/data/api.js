@@ -3,7 +3,7 @@ const products = [
     id: 1,
     name: "Fulgor Nocturnus",
     description:
-      "Tibaldi made, 945 black diamonds,123 rubies,18-carat gold nib",
+      "Tibaldi made, 945 black diamonds, 123 rubies, 18-carat gold nib",
     price: 8000000.0,
     icon: "/images/pen1.jpg",
     quantity: 1,
@@ -21,7 +21,7 @@ const products = [
     id: 3,
     name: "1010 Diamond Edition",
     description:
-      "Caran d’Ache made, diamonds in different cutting styles, 18 carat white gold  ",
+      "Caran d’Ache made, diamonds in different cutting styles, 18 carat white gold",
     price: 1280000.0,
     icon: "/images/pen3.jpg",
     quantity: 1,

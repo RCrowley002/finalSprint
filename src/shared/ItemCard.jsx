@@ -22,12 +22,15 @@ const ItemCard = ({ item }) => {
   return (
     <div className="card">
       <h2>{item.name}</h2>
+      <img src={item.icon} alt="" height="60px"/>
       <p>{item.description}</p>
+      
       <p>
         price - <FormattedPrice value={item.price} />
       </p>
       <h2>Quantity {item.quantity}</h2>
-      <button className="btn2 top-right" onClick={handleRemove}>
+           
+      <button className="btn1 top-right" onClick={handleRemove}>
         Remove Item
       </button>
     </div>

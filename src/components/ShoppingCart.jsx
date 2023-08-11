@@ -25,10 +25,11 @@ const ShoppingCart = () => {
         ))}
 
         <OrderSummary />
-      </div>
+   
       <BackButton></BackButton>
 
       <CheckoutButton></CheckoutButton>
+      </div>
     </>
   );
 };

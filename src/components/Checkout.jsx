@@ -1,13 +1,17 @@
 import React, { useState } from "react";
 import Nav from "./Nav";
 import Header from "./Header";
+import BackButton from "../shared/BackButton";
+import ConfirmButton from "../shared/ConfirmButton";
+import { Link } from "react-router-dom";
+import OrderSummary from "./OrderSummary";
 
 const Checkout = () => {
   return (
     <>
       <Nav></Nav>
       <Header></Header>
-      <div>
+      <div className="checkout">
         <h2>Checkout</h2>
         <form action="">
           <label>
@@ -33,7 +37,7 @@ const Checkout = () => {
             <input type="text" />
           </label>
           <label>
-            Poatal Code/ Zip Code:
+            Postal Code / Zip Code:
             <input type="text" />
           </label>
           <label>
@@ -41,6 +45,11 @@ const Checkout = () => {
             <input type="text" />
           </label>
         </form>
+        <OrderSummary></OrderSummary>
+        <Link to="/cart">
+          <button className="btn1">&#8656; Back to Cart</button>
+        </Link>
+        <ConfirmButton></ConfirmButton>
       </div>
     </>
   );

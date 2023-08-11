@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Poppins:wght@200&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Nanum+Myeongjo&family=Poppins:wght@200&display=swap");
 
+* {
+  font-family: "Nanum Myeongjo", serif;
+}
+
 body {
   background-color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Nanum Myeongjo", serif;
 }
 
 a {
@@ -34,7 +34,7 @@ code {
   width: 275px;
   margin: 17px;
   padding-top: 22px;
-  border-top: solid lightgrey 4px;
+  border-top: solid lightgrey 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -74,6 +74,17 @@ code {
 .productLabel {
   align-items: center;
   font-size: 10pt;
+  display: inline;
+  width: 210px;
+  text-align: center;
+}
+
+.productLabel img {
+  height: 26px;
+  position: absolute;
+  margin-right: 18px;
+  right: 0;
+  top: 195px;
 }
 
 .dropImage {
@@ -83,25 +94,44 @@ code {
 }
 
 .btn1 {
-  font-size: 22pt;
+  font-size: 14pt;
+  font-weight: bold;
   cursor: pointer;
   border: none;
-  background-color: rgba(255, 255, 255, 0);
+  background-color: lightgray;
+  width: 170px;
+  height: 48px;
+  border-radius: 15px;
+  margin: 5px;
+}
+
+.btn1 img {
+  height: 20px;
 }
 
 .btn2 {
-  font-size: 12pt;
-  cursor: pointer;
+  background-color: lightgreen;
+}
+
+button:active,
+.cart-button:active {
+  transform: scale(95%);
 }
 
 .header {
-  height: 20px;
+  height: 0px;
+  top: 0;
+  right: 0;
+  background-color: white;
   display: flex;
   padding: 25px;
   justify-content: end;
   align-items: center;
   font-size: 15pt;
   font-weight: bold;
+  position: sticky;
+  z-index: 10;
+  border-bottom: 1px solid lightgray;
 }
 
 .header img {
@@ -113,11 +143,11 @@ code {
   display: block;
   white-space: nowrap;
   overflow: visible;
-  margin: 60px 0px 60px 0px;
+  margin: 30px 0px 50px 0px;
 }
 
 .homeImages img {
-  width: 270px;
+  width: 260px;
   vertical-align: middle;
   margin: 10px;
 }
@@ -125,10 +155,11 @@ code {
 .enter {
   font-size: 16pt;
   font-weight: bold;
+  padding: 50px;
 }
 
 .socials {
-  border-top: lightgray solid 4px;
+  border-top: lightgray solid 8px;
   margin: auto;
   margin-top: 15px;
   width: 180px;
@@ -141,9 +172,10 @@ code {
 }
 
 aside {
-  position: fixed;
+  top: 0;
+  left: 0;
   float: left;
-  width: 195px;
+  width: 210px;
   height: 100vh;
   text-align: center;
   position: sticky;
@@ -154,12 +186,12 @@ aside {
   font-size: 14pt;
   line-height: 140%;
   padding: 10px;
-  width: 100px;
+  width: 110px;
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  border-top: solid lightgrey 4px;
-  border-bottom: solid lightgrey 4px;
+  border-top: solid lightgrey 8px;
+  border-bottom: solid lightgrey 8px;
 }
 
 .links a:hover {
@@ -173,6 +205,10 @@ aside {
   margin-right: 25px;
 }
 
+.cart-button {
+  cursor: pointer;
+}
+
 .cart-preview {
   position: absolute;
   top: 100%; /* Position the dropdown below the cart icon */
@@ -180,7 +216,7 @@ aside {
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 10px;
-  box-shadow: 0px 2px 4px black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
   padding: 5px;
   z-index: 1000;
   display: none; /* Initially hide the dropdown */
@@ -195,7 +231,7 @@ aside {
   color: black;
   border: 2px solid silver;
   border-radius: 10px;
-  box-shadow: 1px 3px 5px black;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
   padding: 3px;
   margin-bottom: 3px;
   position: relative;
@@ -207,7 +243,7 @@ aside {
   width: 600px;
   border: 2px solid silver;
   border-radius: 10px;
-  box-shadow: 1px 3px 5px black;
+  box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.5);
   padding: 10px;
   margin-bottom: 10px;
   position: relative;
@@ -220,7 +256,7 @@ aside {
 }
 
 .summary {
-  border: 3px solid black;
+  border: 3px solid lightgray;
   width: 300px;
   padding: 10px;
   background-color: #f5f5f5;
@@ -234,7 +270,8 @@ aside {
 }
 
 .cart {
-  float: left;
+  position: relative;
+  margin-left: 250px;
 }
 
 .details {
@@ -242,6 +279,7 @@ aside {
   width: 650px;
   text-align: center;
   flex-direction: column;
+  align-items: center;
   margin: auto;
   padding: 20px;
 }
@@ -255,14 +293,42 @@ aside {
   width: 450px;
   height: auto;
   align-self: center;
-  margin-top: 20px;
 }
 
 .detailsName {
   font-size: 36pt;
   font-family: "Great Vibes", cursive;
+  margin: 25px;
 }
 
 .productImage {
   align-self: center;
+}
+
+.logo h1,
+.logo h4 {
+  font-family: "Great Vibes", cursive;
+}
+
+.logo h1 {
+  margin-bottom: -26px;
+  margin-top: 40px;
+  font-size: 60pt;
+}
+
+.logo h4 {
+  margin: 0px;
+  font-size: 36pt;
+}
+
+.checkout {
+  float: left;
+  margin-left: 40px;
+}
+
+.checkout label {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin: 10px;
 }
