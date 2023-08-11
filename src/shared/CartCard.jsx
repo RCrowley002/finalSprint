@@ -8,6 +8,7 @@ const CartCard = ({ item }) => {
       {/*  <p>
         price - <FormattedPrice value={item.price} />
       </p>*/}
+      <p style={{ fontSize: "10px" }}>QTY: {item.quantity}</p>
     </div>
   );
 };
