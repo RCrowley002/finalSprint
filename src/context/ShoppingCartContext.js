@@ -94,19 +94,26 @@ export const ShoppingCartProvider = ({ children }) => {
   };
 
   // to remove an item from your cart
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7f6fd89861cb527d5f72d2491159020f840f254f
   const deleteFromCart = async (item) => {
     if (item.quantity === 0) {
       await fetch(`http://localhost:5000/shoppingcart/${item.id}`, {
         method: "DELETE",
       });
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7f6fd89861cb527d5f72d2491159020f840f254f
       setShoppingCart((prevCart) =>
         prevCart.filter((cartItem) => cartItem.id !== item.id)
       );
     } else {
       const response = await fetch(
         `http://localhost:5000/shoppingcart/${item.id}`,
+<<<<<<< HEAD
 
         {
           method: "PUT",
@@ -123,6 +130,18 @@ export const ShoppingCartProvider = ({ children }) => {
         return;
       }
 
+=======
+        {
+          method: "PUT",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(item),
+        }
+      );
+      if (!response.ok) {
+        console.error("Error updating item quantity:", response);
+        return;
+      }
+>>>>>>> 7f6fd89861cb527d5f72d2491159020f840f254f
       setShoppingCart((prevCart) =>
         prevCart.map((cartItem) => (cartItem.id === item.id ? item : cartItem))
       );

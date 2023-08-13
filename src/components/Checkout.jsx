@@ -13,7 +13,14 @@ const Checkout = () => {
       <Header></Header>
       <div className="checkout">
         <h2>Checkout</h2>
+
         <form action="">
+          <h3>Contact Information</h3>
+          <label>
+            E-mail Address:
+            <input type="text" />
+          </label>
+          <h3>Shipping Information</h3>
           <label>
             First Name:
             <input type="text" />
@@ -42,6 +49,48 @@ const Checkout = () => {
           </label>
           <label>
             Country:
+            <input type="text" />
+          </label>
+          <br />
+          <h3>Payment Method</h3>
+          <label>
+            Card Type:
+            <select style={{ width: "140px" }}>
+              <option value="Interac">Interac</option>
+              <option value="Visa">Visa</option>
+              <option value="Mastercard">Mastercard</option>
+              <option value="American Express">American Express</option>
+            </select>
+          </label>
+          <label>
+            Card Number:
+            <input type="text" style={{ width: "140px" }} />
+          </label>
+          <p>Expiry Date</p>
+          <div className="pay-drop">
+            <label>
+              Month:
+              <select>
+                {Array.from({ length: 12 }, (_, index) => (
+                  <option key={index + 1} value={index + 1}>
+                    {index + 1}
+                  </option>
+                ))}
+              </select>
+            </label>
+            <label>
+              Year:
+              <select>
+                {Array.from({ length: 25 }, (_, index) => (
+                  <option key={index + 1} value={2023 + index}>
+                    {2023 + index}
+                  </option>
+                ))}
+              </select>
+            </label>
+          </div>
+          <label style={{ width: "60px" }}>
+            Cvv:
             <input type="text" />
           </label>
         </form>
