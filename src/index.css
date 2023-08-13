@@ -333,3 +333,7 @@ aside {
   width: 400px;
   margin: 10px;
 }
+
+.pay-drop select {
+  width: 60px;
+}

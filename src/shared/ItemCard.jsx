@@ -14,7 +14,6 @@ const ItemCard = ({ item }) => {
       deleteFromCart(item.id);
     } else {
       const updatedItem = { ...item, quantity: item.quantity - 1 };
-
       deleteFromCart(updatedItem);
     }
   };
@@ -33,6 +32,7 @@ const ItemCard = ({ item }) => {
       <button className="btn1 top-right" onClick={handleRemove}>
         Remove Item
       </button>
+      <h2>Quantity: {item.quantity}</h2>
     </div>
   );
 };
