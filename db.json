@@ -1,20 +1,36 @@
 {
   "shoppingcart": [
     {
-      "id": 2,
-      "name": " Mystery Masterpiece",
-      "description": "Montblanc made, over 800 diamonds and three variations involving emeralds, sapphires, and rubies along its body",
-      "price": 730000,
-      "icon": "/images/pen2.jpg",
+      "id": 1,
+      "name": "Fulgor Nocturnus",
+      "description": "Tibaldi made, 945 black diamonds, 123 rubies, 18-carat gold nib",
+      "price": 8000000,
+      "icon": "/images/pen1.jpg",
+      "quantity": 6
+    },
+    {
+      "id": 4,
+      "name": "Gothica",
+      "description": "Caran d’Ache made, approximately 900 diamonds, patterns of fleur-de-lis and rosettes, 72 emeralds, and 72 rubies",
+      "price": 487000,
+      "icon": "/images/pen4.jpg",
+      "quantity": 5
+    },
+    {
+      "id": 5,
+      "name": "Boheme Royal",
+      "description": "Montblanc made, over 1,400 high-grade coloured diamonds, 18k white gold",
+      "price": 1500000,
+      "icon": "/images/pen5.jpg",
       "quantity": 2
     },
     {
-      "id": 13,
-      "name": " La Dona Menagerie",
-      "description": "Cartier made, inspired by a gold crocodile necklace from Cartier, who used a similar pattern to create a limited line of expensive pens",
-      "price": 4000,
-      "icon": "/images/pen13.jpg",
-      "quantity": 1
+      "id": 3,
+      "name": "1010 Diamond Edition",
+      "description": "Caran d’Ache made, diamonds in different cutting styles, 18 carat white gold",
+      "price": 1280000,
+      "icon": "/images/pen3.jpg",
+      "quantity": 4
     }
   ]
 }
