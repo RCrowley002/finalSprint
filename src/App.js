@@ -16,9 +16,6 @@ function App() {
   return (
     <Router>
       <ShoppingCartProvider>
-        {/* <Nav></Nav>
-        <Header></Header> */}
-
         <Routes>
           <Route
             path="/"
