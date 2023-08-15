@@ -1,12 +1,3 @@
 {
-  "shoppingcart": [
-    {
-      "id": 5,
-      "name": "Boheme Royal",
-      "description": "Montblanc made, over 1,400 high-grade coloured diamonds, 18k white gold",
-      "price": 1500000,
-      "icon": "/images/pen5.jpg",
-      "quantity": 1
-    }
-  ]
+  "shoppingcart": []
 }

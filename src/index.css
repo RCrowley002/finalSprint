@@ -56,7 +56,7 @@ code {
   display: none;
 }
 
-/*  */
+/* show price when hovering over image */
 .itemDisplay:hover + .price {
   width: 240px;
   height: 120px;
@@ -114,6 +114,7 @@ code {
   background-color: lightgreen;
 }
 
+/*change size of button on click*/
 button:active,
 .cart-button:active {
   transform: scale(95%);
@@ -131,7 +132,7 @@ button:active,
   font-size: 15pt;
   font-weight: bold;
   position: sticky;
-  z-index: 10;
+  z-index: 1;
   border-bottom: 1px solid lightgray;
 }
 
@@ -180,6 +181,8 @@ aside {
   height: 100vh;
   text-align: center;
   position: sticky;
+  z-index: 2;
+  background-color: white;
 }
 
 .links {
@@ -336,4 +339,19 @@ aside {
 
 .pay-drop select {
   width: 60px;
+}
+
+#contact {
+  margin: 40px;
+  float: left;
+}
+
+#contactLinks {
+  display: flex;
+}
+
+.confirm {
+  display: block;
+  text-align: center;
+  margin-top: 100px;
 }

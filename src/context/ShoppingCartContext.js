@@ -121,6 +121,24 @@ export const ShoppingCartProvider = ({ children }) => {
     }
   };
 
+  const clearCart = async () => {
+    try {
+      //need to create loop to delete multiple items
+
+      for (const item of shoppingCart) {
+        await fetch(`http://localhost:5000/shoppingcart/${item.id}`, {
+          method: "DELETE",
+        });
+      }
+
+      // After all items are deleted, update the context to clear the cart
+
+      setShoppingCart([]);
+    } catch (error) {
+      console.error("Error clearing shopping cart:", error);
+    }
+  };
+
   return (
     <ShoppingCartContext.Provider
       value={{
@@ -128,6 +146,7 @@ export const ShoppingCartProvider = ({ children }) => {
         deleteFromCart,
         setShoppingCart,
         addToCart,
+        clearCart,
       }}
     >
       {children}

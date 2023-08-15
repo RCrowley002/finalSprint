@@ -1,9 +1,6 @@
-import React from "react";
+import { React } from "react";
 import BackButton from "../shared/BackButton";
-import { useContext } from "react";
-import ShoppingCartContext, {
-  useShoppingCart,
-} from "../context/ShoppingCartContext";
+import { useShoppingCart } from "../context/ShoppingCartContext";
 import ItemCard from "../shared/ItemCard";
 import OrderSummary from "./OrderSummary";
 import CheckoutButton from "../shared/CheckoutButton";
@@ -25,10 +22,10 @@ const ShoppingCart = () => {
         ))}
 
         <OrderSummary />
-   
-      <BackButton></BackButton>
 
-      <CheckoutButton></CheckoutButton>
+        <BackButton></BackButton>
+
+        <CheckoutButton></CheckoutButton>
       </div>
     </>
   );

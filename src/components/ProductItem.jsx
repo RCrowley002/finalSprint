@@ -33,7 +33,6 @@ const ProductItem = ({ item }) => {
           className="cart-button"
         />
       </div>
-      {/* <CartButton item={item}></CartButton> */}
     </div>
   );
 };
