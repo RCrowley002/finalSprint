@@ -1,3 +1,20 @@
 {
-  "shoppingcart": []
+  "shoppingcart": [
+    {
+      "id": 1,
+      "name": "Fulgor Nocturnus",
+      "description": "Tibaldi made, 945 black diamonds, 123 rubies, 18-carat gold nib",
+      "price": 8000000,
+      "icon": "/images/pen1.jpg",
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "name": "Gothica",
+      "description": "Caran d’Ache made, approximately 900 diamonds, patterns of fleur-de-lis and rosettes, 72 emeralds, and 72 rubies",
+      "price": 487000,
+      "icon": "/images/pen4.jpg",
+      "quantity": 3
+    }
+  ]
 }

@@ -46,7 +46,7 @@ const Contact = () => {
             style={{ width: "380px", height: "100px" }}
           />
         </form>
-        <button className="btn1" onClick={submit}>
+        <button className="btn1 btn2" onClick={submit}>
           Submit
         </button>
       </div>
